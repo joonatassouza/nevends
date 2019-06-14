@@ -55,7 +55,7 @@ class Feed extends Component {
                             <img src={more} alt='Mais' />
                         </header>
                         
-                        <img src={`${process.env.REACT_APP_API_URL}/files/${post.image}`} alt='' />
+                        <img src={post.imageUrl} alt='' />
 
                         <footer>
                             <div className='actions'>
