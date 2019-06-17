@@ -1,7 +1,10 @@
 header#main-header {
-    background: #fff;
+    background: #5CA47A;
     height: 72px;
     border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 header#main-header .header-content {
@@ -14,3 +17,30 @@ header#main-header .header-content {
     align-items: center;
     justify-content: space-between
 }
+
+header#main-header .header-content .logo {
+    position: absolute;
+    margin-top: -9px;
+    margin-left: -9px;
+}
+
+header#main-header .header-content .loading {
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+
+header#main-header .header-content .posts {
+    font-size: 8px;
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+}
+
+header#main-header .header-content .posts:hover {
+    opacity: 0.5;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

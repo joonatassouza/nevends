@@ -1,15 +1,22 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
-import Routes from './routes';
+import Body from './components/Body';
+import { Provider } from 'react-redux';
+import store from './store';
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer } from 'react-notifications';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Header />
-        <Routes />
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Header />
+          <Body />
+        </BrowserRouter>
+        <NotificationContainer />
+      </Provider>
     </div>
   );
 }
